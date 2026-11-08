@@ -261,11 +261,11 @@ button,a{-webkit-tap-highlight-color:transparent}
 <div class="scroll-progress" aria-hidden="true"></div>
 <div class="study-note">PROYEK AKADEMIK / TEKNIK HUMAS — BUKAN SITUS RESMI PT TAH SUNG HUNG</div>
 <header class="site-header" id="atas">
-<a class="identity" href="#atas" aria-label="Kembali ke beranda"><span class="identity-mark">TSH<span class="identity-dot">.</span></span><span class="identity-text">TAH SUNG HUNG<small>THE MANUFACTURING JOURNAL</small></span></a>
+<a class="identity" expr:href='data:blog.homepageUrl + "#atas"' aria-label="Kembali ke beranda"><span class="identity-mark">TSH<span class="identity-dot">.</span></span><span class="identity-text">TAH SUNG HUNG<small>THE MANUFACTURING JOURNAL</small></span></a>
 <nav class="nav" id="primary-nav" aria-label="Navigasi utama">
-<a href="#profil">PROFIL</a><a href="#arah">VISI &amp; MISI</a><a href="#struktur">ORGANISASI</a><a href="#berita">BERITA</a><a href="#galeri">GALERI</a>
+<a expr:href='data:blog.homepageUrl + "#profil"'>PROFIL</a><a expr:href='data:blog.homepageUrl + "#arah"'>VISI &amp; MISI</a><a expr:href='data:blog.homepageUrl + "#struktur"'>ORGANISASI</a><a expr:href='data:blog.homepageUrl + "#berita"'>BERITA</a><a expr:href='data:blog.homepageUrl + "#galeri"'>GALERI</a>
 </nav>
-<a class="header-contact" href="#tentang">TENTANG WEBLOG <span aria-hidden="true">↗</span></a>
+<a class="header-contact" expr:href='data:blog.homepageUrl + "#tentang"'>TENTANG WEBLOG <span aria-hidden="true">↗</span></a>
 <button class="menu-toggle" aria-label="Buka navigasi" aria-controls="primary-nav" aria-expanded="false" type="button"><span></span><span></span></button>
 </header>
 <main>
@@ -278,7 +278,7 @@ button,a{-webkit-tap-highlight-color:transparent}
 <h1 id="hero-heading"><span class="title-line"><span>ADA</span></span><span class="title-line"><span>SEBUAH</span></span><span class="title-line"><span>PROSES<span class="title-period">.</span></span></span></h1>
 <p class="hero-sub reveal">Kualitas tidak terjadi begitu saja. Ia dibangun oleh manusia, ketelitian, dan langkah-langkah yang terus diperbaiki.</p>
 </div>
-<div class="hero-foot"><a href="#profil" class="round-cta" aria-label="Jelajahi profil perusahaan"><span>↓</span></a><span>JELAJAHI CERITA KAMI</span><span class="hero-foot-index">01 / 05</span></div>
+<div class="hero-foot"><a expr:href='data:blog.homepageUrl + "#profil"' class="round-cta" aria-label="Jelajahi profil perusahaan"><span>↓</span></a><span>JELAJAHI CERITA KAMI</span><span class="hero-foot-index">01 / 05</span></div>
 </div>
 <div class="hero-media">
 <img class="hero-image" src="https://tshshoes.com/gallery_gen/2a619641852c0b0f46a97175b5e50853_2304x1294_fit.jpg?ts=1728025906" alt="Suasana lini produksi di fasilitas PT Tah Sung Hung, Brebes" fetchpriority="high" />
@@ -418,7 +418,7 @@ button,a{-webkit-tap-highlight-color:transparent}
   </b:section>
 </section>
 </main>
-<footer class="footer"><a href="#atas" class="footer-toplink">KEMBALI KE ATAS <span>↑</span></a><div class="footer-name">TAH SUNG HUNG<span>.</span></div><div class="footer-bottom"><span>ACADEMIC WEBLOG / NUR HELEN SHAFIRA © 2026</span><span>DESIGNED TO COMMUNICATE WITH CLARITY</span></div></footer>
+<footer class="footer"><a expr:href='data:blog.homepageUrl + "#atas"' class="footer-toplink">KEMBALI KE ATAS <span>↑</span></a><div class="footer-name">TAH SUNG HUNG<span>.</span></div><div class="footer-bottom"><span>ACADEMIC WEBLOG / NUR HELEN SHAFIRA © 2026</span><span>DESIGNED TO COMMUNICATE WITH CLARITY</span></div></footer>
 <script type="text/javascript">
 //<![CDATA[
 (() => {
@@ -498,7 +498,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
         links.forEach(link => {
-          const active = link.getAttribute('href') === '#' + entry.target.id;
+          const active = link.hash === '#' + entry.target.id;
           link.classList.toggle('active', active);
           if (active) link.setAttribute('aria-current', 'location');
           else link.removeAttribute('aria-current');
