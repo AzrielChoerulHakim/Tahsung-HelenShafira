@@ -462,7 +462,7 @@ button,a{-webkit-tap-highlight-color:transparent}
     progress.style.width = (scroll / scrollable * 100).toFixed(2) + '%';
     header.classList.toggle('scrolled', scroll > 35);
 
-    if (!reduceMotion &amp;&amp; heroPhoto &amp;&amp; scroll < window.innerHeight * 1.5) {
+    if (!reduceMotion && heroPhoto && scroll < window.innerHeight * 1.5) {
       heroPhoto.style.setProperty('--photo-shift', Math.min(17, scroll * 0.025).toFixed(2) + 'px');
     }
     framePending = false;
